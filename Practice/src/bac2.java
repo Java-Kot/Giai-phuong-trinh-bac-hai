@@ -10,9 +10,16 @@ public class bac2 {
         System.out.println("Nhập vào số c");
         int c = sc.nextInt();
         if (a == 0) {
-            System.out.println("Tạm thời chưa biết phương trình bậc 1 là cái gì !!! Oke !");
+            if (b == 0) {
+                System.out.print("Phương trình không chính xác!");
+            } else {
+                float ptb1 = (-c) / b;
+            }
         } else {
-            System.out.println("Nói chung đến đây cũng không biết giải toán luôn !");
+            double delta = Math.pow(b,2) - 4 * a * c;
+            double nghiem1 = -b + Math.sqrt(delta) / 2 * a;
+            double nghiem2 = -b - Math.sqrt(delta) / 2 * a;
+            System.out.println("Nghiệm thứ nhất là : " + nghiem1 + " Nghiệm thứ 2 là " + nghiem2);
         }
     }
 }
